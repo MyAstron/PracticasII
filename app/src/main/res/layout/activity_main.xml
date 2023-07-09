@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#b197fc"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:text="Bienvenido a mi Programa"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Usuario" />
+
+    <EditText
+        android:id="@+id/Usuario"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:hint="\t\tCristopher Sic"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Contraseña"/>
+
+    <EditText
+        android:id="@+id/Contra"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberPassword"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/Iniciar"
+        android:layout_width="260dp"
+        android:layout_height="75dp"
+        android:textSize="20dp"
+        android:backgroundTint="#4c6ef5"
+        android:text="Iniciar Seccion" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2023 © Cristopher Sic"
+        android:textColor="#4c6ef5"
+        android:textSize="16sp" />
+
+</LinearLayout>

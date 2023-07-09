@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#e599f7"
+    tools:context=".Plan">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculo de Importe"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtEmpleado"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="Nombre del Empleado" />
+
+    <EditText
+        android:id="@+id/edtEmpleado"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="Horas de Trabajo" />
+
+    <EditText
+        android:id="@+id/edtHoras"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:text="Costo (h)" />
+
+    <EditText
+        android:id="@+id/edtCosto"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:minHeight="48dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:text="Calcular" />
+
+    <TextView
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:text="IMPORTE POR COBRAR" />
+
+    <TextView
+        android:id="@+id/txtImporte"
+        android:layout_width="340dp"
+        android:layout_height="101dp"
+        android:text="0.00"
+        android:textStyle="bold"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4c6ef5"
+        android:text="Salir" />
+</LinearLayout>

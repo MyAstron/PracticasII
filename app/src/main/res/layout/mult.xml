@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#e599f7"
+    tools:context=".Mult">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Listado de Audios"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="307dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Imagine Dragos" />
+
+            <ImageView
+                android:id="@+id/imgAudio1"
+                android:layout_width="134dp"
+                android:layout_height="123dp"
+                app:srcCompat="@drawable/altavoz" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mago de Oz" />
+
+            <ImageView
+                android:id="@+id/imgAudio2"
+                android:layout_width="134dp"
+                android:layout_height="123dp"
+                app:srcCompat="@drawable/altavoz" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cuarteto de Nos" />
+
+            <ImageView
+                android:id="@+id/imgAudio3"
+                android:layout_width="134dp"
+                android:layout_height="123dp"
+                app:srcCompat="@drawable/altavoz" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Viento en Contra" />
+
+            <ImageView
+                android:id="@+id/imgAudio4"
+                android:layout_width="134dp"
+                android:layout_height="123dp"
+                app:srcCompat="@drawable/altavoz"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSalir"
+        android:layout_width="294dp"
+        android:layout_height="wrap_content"
+        android:text="Salir"
+        android:backgroundTint="#4c6ef5"/>
+
+</LinearLayout>
