@@ -27,8 +27,8 @@ public class Adaptador extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         View vista = inflater.inflate(R.layout.plantilla, null);
 
-        TextView txtNombre = (TextView) vista.findViewById(R.id.txtNombre);
-        ImageView imgIcono = (ImageView) vista.findViewById(R.id.imgIcono);
+        TextView txtNombre = vista.findViewById(R.id.txtNombre);
+        ImageView imgIcono = vista.findViewById(R.id.imgIcono);
 
         txtNombre.setText(aplicaciones[i]);
         imgIcono.setImageResource(imagenes[i]);

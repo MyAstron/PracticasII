@@ -12,183 +12,200 @@ public class Calc extends AppCompatActivity {
 
     double Numero1 = 0, Numero2 = 0, Resultado = 0;
     int Operacion = 0;
-    EditText edtOperaciones;
-    Button No0, No1, No2, No3, No4, No5, No6, No7, No8, No9, btnPunto, btnSuma, btnResta, btnDivision, btnMultiplicacion, btnBorrar, btnIgual, btnSalir;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calc);
 
-        edtOperaciones = (EditText) findViewById(R.id.edtOperacion);
-        No0 = (Button) findViewById(R.id.btnNo0);
-        No1 = (Button) findViewById(R.id.btnNo1);
-        No2 = (Button) findViewById(R.id.btnNo2);
-        No3 = (Button) findViewById(R.id.btnNo3);
-        No4 = (Button) findViewById(R.id.btnNo4);
-        No5 = (Button) findViewById(R.id.btnNo5);
-        No6 = (Button) findViewById(R.id.btnNo6);
-        No7 = (Button) findViewById(R.id.btnNo7);
-        No8 = (Button) findViewById(R.id.btnNo8);
-        No9 = (Button) findViewById(R.id.btnNo9);
-        btnPunto = (Button) findViewById(R.id.btnPunto);
-        btnSuma = (Button) findViewById(R.id.btnSuma);
-        btnResta = (Button) findViewById(R.id.btnResta);
-        btnDivision = (Button) findViewById(R.id.btnDivi);
-        btnMultiplicacion = (Button) findViewById(R.id.btnMulti);
-        btnBorrar = (Button) findViewById(R.id.btnBorrar);
-        btnIgual = (Button) findViewById(R.id.btnIgual);
-        btnSalir = (Button) findViewById(R.id.btnSalir);
+        EditText edtOperaciones = findViewById(R.id.edtOperacion);
+        Button No0 = findViewById(R.id.btnNo0),
+                No1 = findViewById(R.id.btnNo1),
+                No2 = findViewById(R.id.btnNo2),
+                No3 = findViewById(R.id.btnNo3),
+                No4 = findViewById(R.id.btnNo4),
+                No5 = findViewById(R.id.btnNo5),
+                No6 = findViewById(R.id.btnNo6),
+                No7 = findViewById(R.id.btnNo7),
+                No8 = findViewById(R.id.btnNo8),
+                No9 = findViewById(R.id.btnNo9),
+                btnPunto = findViewById(R.id.btnPunto),
+                btnSuma = findViewById(R.id.btnSuma),
+                btnResta = findViewById(R.id.btnResta),
+                btnDivision =  findViewById(R.id.btnDivi),
+                btnMultiplicacion = findViewById(R.id.btnMulti),
+                btnBorrar = findViewById(R.id.btnBorrar),
+                btnIgual = findViewById(R.id.btnIgual),
+                btnSalir = findViewById(R.id.btnSalir);
 
-        // Boton No0
         No0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (edtOperaciones.getText().toString().isEmpty()) {
+                if (Resultado != 0 || edtOperaciones.getText().toString().isEmpty() || edtOperaciones.getText().toString().startsWith("("))
                     return;
-                } else {
+                else
                     edtOperaciones.setText(edtOperaciones.getText().toString()+"0");
-                }
+
             }
         });
 
-        // Boton No1
         No1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                edtOperaciones.setText(edtOperaciones.getText().toString()+"1");
+                if (Resultado != 0) return;
+                else if (edtOperaciones.getText().toString().startsWith("("))
+                    edtOperaciones.setText("1");
+                else
+                    edtOperaciones.setText(edtOperaciones.getText().toString()+"1");
             }
         });
 
-        // Boton No2
         No2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                edtOperaciones.setText(edtOperaciones.getText().toString()+"2");
+                if (Resultado != 0) return;
+                else if (edtOperaciones.getText().toString().startsWith("("))
+                    edtOperaciones.setText("2");
+                else
+                    edtOperaciones.setText(edtOperaciones.getText().toString()+"2");
             }
         });
 
-        // Boton No3
         No3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                edtOperaciones.setText(edtOperaciones.getText().toString()+"3");
+                if (Resultado != 0) return;
+                else if (edtOperaciones.getText().toString().startsWith("("))
+                    edtOperaciones.setText("3");
+                else
+                    edtOperaciones.setText(edtOperaciones.getText().toString()+"3");
             }
         });
 
-        // Boton No4
         No4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                edtOperaciones.setText(edtOperaciones.getText().toString()+"4");
+                if (Resultado != 0) return;
+                else if (edtOperaciones.getText().toString().startsWith("("))
+                    edtOperaciones.setText("4");
+                else
+                    edtOperaciones.setText(edtOperaciones.getText().toString()+"4");
             }
         });
 
-        // Boton No5
         No5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                edtOperaciones.setText(edtOperaciones.getText().toString()+"5");
+                if (Resultado != 0) return;
+                else if (edtOperaciones.getText().toString().startsWith("("))
+                    edtOperaciones.setText("5");
+                else
+                    edtOperaciones.setText(edtOperaciones.getText().toString()+"5");
             }
         });
 
-        // Boton No6
         No6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                edtOperaciones.setText(edtOperaciones.getText().toString()+"6");
+                if (Resultado != 0) return;
+                else if (edtOperaciones.getText().toString().startsWith("("))
+                    edtOperaciones.setText("6");
+                else
+                    edtOperaciones.setText(edtOperaciones.getText().toString()+"6");
             }
         });
 
-        // Boton No7
         No7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                edtOperaciones.setText(edtOperaciones.getText().toString()+"7");
+                if (Resultado != 0) return;
+                else if (edtOperaciones.getText().toString().startsWith("("))
+                    edtOperaciones.setText("7");
+                else
+                    edtOperaciones.setText(edtOperaciones.getText().toString()+"7");
             }
         });
 
-        // Boton No8
         No8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                edtOperaciones.setText(edtOperaciones.getText().toString()+"8");
+                if (Resultado != 0) return;
+                else if (edtOperaciones.getText().toString().startsWith("("))
+                    edtOperaciones.setText("8");
+                else
+                    edtOperaciones.setText(edtOperaciones.getText().toString()+"8");
             }
         });
 
-        // Boton No9
         No9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                edtOperaciones.setText(edtOperaciones.getText().toString()+"9");
+                if (Resultado != 0) return;
+                else if (edtOperaciones.getText().toString().startsWith("("))
+                    edtOperaciones.setText("9");
+                else
+                    edtOperaciones.setText(edtOperaciones.getText().toString()+"9");
             }
         });
 
-        // Boton del Punto
         btnPunto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (edtOperaciones.getText().toString().isEmpty()) {
+                if (Resultado != 0) return;
+                else if (edtOperaciones.getText().toString().contains("."))
+                    return;
+                else if (edtOperaciones.getText().toString().startsWith("("))
+                    return;
+                else if (edtOperaciones.getText().toString().isEmpty())
                     edtOperaciones.setText("0.");
-                } else {
-                    edtOperaciones.setText(edtOperaciones.getText().toString()+".");
-                }
+                else edtOperaciones.setText(edtOperaciones.getText().toString()+".");
             }
         });
 
-        // Boton de Sumar
         btnSuma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Numero1 != 0 || Operacion != 0){
+                if (Operacion != 0 || Resultado != 0 || edtOperaciones.getText().toString().startsWith("("))
                     return;
-                }
                 Numero1 = Double.parseDouble(edtOperaciones.getText().toString());
                 Operacion = 1;
-                edtOperaciones.setText("");
+                edtOperaciones.setText("(+) Suma");
             }
         });
 
-        // Boton de Restar
         btnResta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Numero1 != 0 || Operacion != 0){
+                if (Resultado != 0 || Operacion != 0 || edtOperaciones.getText().toString().startsWith("("))
                     return;
-                }
                 Numero1 = Double.parseDouble(edtOperaciones.getText().toString());
                 Operacion = 2;
-                edtOperaciones.setText("");
+                edtOperaciones.setText("(─) Resta");
             }
         });
 
-        // Boton de Multiplicar
         btnMultiplicacion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Numero1 != 0 || Operacion != 0){
+                if (Resultado != 0 || Operacion != 0 || edtOperaciones.getText().toString().startsWith("("))
                     return;
-                }
                 Numero1 = Double.parseDouble(edtOperaciones.getText().toString());
                 Operacion = 3;
-                edtOperaciones.setText("");
+                edtOperaciones.setText("(×) Multiplicacion");
             }
         });
 
-        // Boton de Dividir
         btnDivision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Numero1 != 0 || Operacion != 0){
+                if (Resultado != 0 || Operacion != 0 || edtOperaciones.getText().toString().startsWith("("))
                     return;
-                }
                 Numero1 = Double.parseDouble(edtOperaciones.getText().toString());
                 Operacion = 4;
-                edtOperaciones.setText("");
+                edtOperaciones.setText("(/) Division");
             }
         });
 
-        // Boton Borrar
         btnBorrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -200,32 +217,36 @@ public class Calc extends AppCompatActivity {
             }
         });
 
-        // Boton igual
         btnIgual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (Numero1 == 0 || Resultado != 0 || Operacion == 0) {
-                    return;
-                }
+                if (Numero1 == 0 || Resultado != 0 || Operacion == 0) return;
                 Numero2 = Double.parseDouble(edtOperaciones.getText().toString());
-                if (Operacion == 1){
-                    Resultado = Numero1 + Numero2;
-                } else if (Operacion == 2) {
-                    Resultado = Numero1 - Numero2;
-                } else if (Operacion == 3) {
-                    Resultado = Numero1 * Numero2;
-                } else if (Operacion == 4) {
-                    Resultado = Numero1 / Numero2;
+                switch (Operacion) {
+                    case 1:
+                        Resultado = Numero1 + Numero2;
+                        break;
+                    case 2:
+                        Resultado = Numero1 - Numero2;
+                        break;
+                    case 3:
+                        Resultado = Numero1 * Numero2;
+                        break;
+                    case 4:
+                        Resultado = Numero1 / Numero2;
+                        break;
+                    default:
+                        Resultado = Numero1 + Numero2;
+                        break;
                 }
                 edtOperaciones.setText("R// "+Resultado);
             }
         });
 
-        // Boton de salida
         btnSalir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent salida = new Intent(getApplication(), MainActivity.class);
+                Intent salida = new Intent(getApplication(), Menu.class);
                 startActivity(salida);
             }
         });

@@ -25,10 +25,9 @@ public class Plan extends AppCompatActivity {
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                double Horas, Costo, Importe;
-                Horas = Double.parseDouble(edtHoras.getText().toString());
-                Costo = Double.parseDouble(edtCosto.getText().toString());
-                Importe = Horas * Costo;
+                double Horas = Double.parseDouble(edtHoras.getText().toString()),
+                        Costo = Double.parseDouble(edtCosto.getText().toString()),
+                        Importe = Horas * Costo;
 
                 txtImporte.setText(Importe+"");
             }
@@ -37,7 +36,7 @@ public class Plan extends AppCompatActivity {
         btnSalir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent salida = new Intent(getApplication(), MainActivity.class);
+                Intent salida = new Intent(getApplication(), Menu.class);
                 startActivity(salida);
             }
         });

@@ -15,10 +15,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toast.makeText(getApplication(), "Gracias por usar mi programa ♡", Toast.LENGTH_SHORT).show();
 
-        EditText  User = (EditText) findViewById(R.id.Usuario),
-                Pass = (EditText) findViewById(R.id.Contra);
-        Button btnAcceder = (Button) findViewById(R.id.Iniciar);
+        EditText  User = findViewById(R.id.Usuario),
+                Pass = findViewById(R.id.Contra);
+        Button btnAcceder = findViewById(R.id.Iniciar);
 
         btnAcceder.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent cambio = new Intent(getApplication(), Menu.class);
                     startActivity(cambio);
                 } else {
-                    Toast.makeText(getApplication(), "Credenciales Incorrectas", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplication(), "¡Credenciales Incorrectas!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
