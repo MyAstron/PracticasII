@@ -223,9 +223,6 @@ public class Calc extends AppCompatActivity {
                 if (Numero1 == 0 || Resultado != 0 || Operacion == 0) return;
                 Numero2 = Double.parseDouble(edtOperaciones.getText().toString());
                 switch (Operacion) {
-                    case 1:
-                        Resultado = Numero1 + Numero2;
-                        break;
                     case 2:
                         Resultado = Numero1 - Numero2;
                         break;

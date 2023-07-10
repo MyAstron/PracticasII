@@ -26,7 +26,6 @@ public class Adaptador extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         View vista = inflater.inflate(R.layout.plantilla, null);
-
         TextView txtNombre = vista.findViewById(R.id.txtNombre);
         ImageView imgIcono = vista.findViewById(R.id.imgIcono);
 

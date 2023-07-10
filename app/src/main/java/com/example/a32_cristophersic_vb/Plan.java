@@ -28,7 +28,6 @@ public class Plan extends AppCompatActivity {
                 double Horas = Double.parseDouble(edtHoras.getText().toString()),
                         Costo = Double.parseDouble(edtCosto.getText().toString()),
                         Importe = Horas * Costo;
-
                 txtImporte.setText(Importe+"");
             }
         });
